@@ -3,7 +3,7 @@
     background-color: var(--bg-color-dark);
     min-height: 70rem;
     padding: 5rem 6rem;
-    border-radius: 1rem;
+    border-radius: 3rem;
   }
   
   .searchContainer {
@@ -14,13 +14,13 @@
   
   .searchButton {
     width: 8rem;
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 3rem 0 0 3rem;
     cursor: pointer;
   }
   
   .searchInput {
     width: 100%;
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 0 3rem 3rem 0;
   }
   
   .searchInput::placeholder,

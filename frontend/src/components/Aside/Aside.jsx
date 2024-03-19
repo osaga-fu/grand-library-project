@@ -2,6 +2,7 @@ import { Dialog } from "primereact/dialog";
 import "./Aside.css";
 import { useState } from "react";
 import  Header  from "../Header/Header";
+import 'primeicons/primeicons.css';
 
 export default function Aside() {
   const [visibleBooks, setVisibleBooks] = useState(false);
@@ -81,12 +82,12 @@ export default function Aside() {
   return (
     <aside>
       <button className="buttonAddBook" onClick={() => setVisibleBooks(true)}>
-        <img src="../../../src/imgs/Book Stack.svg" alt="Icono añadir" />
+      <i className="pi pi-book" style={{fontSize: '2.5rem'}}></i>
         AÑADIR LIBRO
       </button>
       <Dialog
         visible={visibleBooks}
-        style={{ width: "50vw" }}
+        style={{ width: "65rem"}}
         onHide={() => {
           setVisibleBooks(false);
           setSuccessMessageBooks("");
@@ -116,16 +117,16 @@ export default function Aside() {
             <input type="text" name="author" placeholder="Autor" />
             <input type="text" name="isbn" placeholder="ISBN" />
             <input type="text" name="sectionCode" placeholder="Sección" />
-            <button type="submit">
-              <img src="../../../src/imgs/Book Stack.svg" alt="Icono añadir" />
+            <button className="acceptButton" type="submit">
+            <i className="pi pi-plus-circle" style={{fontSize: '2.5rem'}}></i>
               ACEPTAR
             </button>
           </form>
         )}
       </Dialog>
 
-      <button className="buttonAddBook" onClick={() => setVisibleMembers(true)}>
-        <img src="../../../src/imgs/User Account.svg" alt="Icono socios" />
+      <button className="buttonAddMember" onClick={() => setVisibleMembers(true)}>
+      <i className="pi pi-user" style={{fontSize: '2.5rem'}}></i>
         AÑADIR SOCIO
       </button>
       <Dialog
@@ -160,11 +161,8 @@ export default function Aside() {
             <input type="text" name="lastName" placeholder="Apellidos" />
             <input type="text" name="dni" placeholder="DNI" />
             <input type="text" name="email" placeholder="Email" />
-            <button type="submit">
-              <img
-                src="../../../src/imgs/User Account.svg"
-                alt="Icono añadir"
-              />
+            <button className="acceptButton" type="submit">
+            <i className="pi pi-plus-circle" style={{fontSize: '3rem'}}></i>
               ACEPTAR
             </button>
           </form>

@@ -31,6 +31,8 @@ html {
   --highlight-color1:#77708E;
   --highlight-color2:#416B7C;
   --highlight-color3: #8e84af;
+  --error: rgb(209, 78, 78);
+  --success: rgb(65, 107, 89);
   --mainfont: 'Roboto', sans-serif;
   --titlefont: "Bowlby One", sans-serif;
 }
