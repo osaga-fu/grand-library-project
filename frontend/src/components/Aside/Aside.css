@@ -1,3 +1,4 @@
+
 .errorMessage,
 .successMessage {
   font-size: 3rem;
@@ -23,7 +24,7 @@
 
 .buttonAddBook,
 .addForm button {
-  width: 26rem;
+  width: 22rem;
   height: 6.4rem;
   background-color: var(--verde-oscuro);
   border: none;
@@ -31,15 +32,16 @@
   display: flex;
   align-items: center;
   color: var(--crema);
-  font-size: 2.4rem;
-  font-weight: bold;
+  font-size: 1.9rem;
+  font-weight: 600;
   justify-content: center;
   cursor: pointer;
   margin-bottom: 2rem;
+  font-family: var(--mainfont);
 }
 
 .buttonAddBook {
-  margin-top: 5.5rem;
+  margin-top: 5rem;
 }
 .p-dialog .p-dialog-content,
 .p-dialog .p-dialog-header {

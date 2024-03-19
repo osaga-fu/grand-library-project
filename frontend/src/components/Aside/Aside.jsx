@@ -79,7 +79,7 @@ export default function Aside() {
     setVisibleMembers(true);
   };
   return (
-    <div>
+    <aside>
       <button className="buttonAddBook" onClick={() => setVisibleBooks(true)}>
         <img src="../../../src/imgs/Book Stack.svg" alt="Icono añadir" />
         AÑADIR LIBRO
@@ -170,6 +170,6 @@ export default function Aside() {
           </form>
         )}
       </Dialog>
-    </div>
+    </aside>
   );
 }

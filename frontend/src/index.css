@@ -22,10 +22,14 @@ html {
   --verde-claro: #a9b2a2;
   --verde-oscuro: #86a397;
   --negro: #4f4940;
-  --mainfont: Inter, sans-serif;
+  --mainfont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
   --titlefont: "Italianno";
 }
 
 body {
   background-color: var(--marron);
+  width: 100%;
+  padding: 2rem 4rem;
 }
+
+
