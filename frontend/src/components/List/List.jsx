@@ -1,6 +1,7 @@
 import "./List.css";
 import { useState } from "react";
 
+
 export default function List() {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
@@ -31,7 +32,7 @@ export default function List() {
         >
           <img
             className="searchIcon"
-            src="../../../src/imgs/Search.svg"
+            src="../../assets/Search.svg"
             alt="icono buscador"
           />
         </button>

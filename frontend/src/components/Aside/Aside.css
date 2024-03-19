@@ -26,14 +26,14 @@
 .addForm button {
   width: 22rem;
   height: 6.4rem;
-  background-color: var(--verde-oscuro);
+  background-color: var(--highlight-color1);
   border: none;
   border-radius: 1rem;
   display: flex;
   align-items: center;
-  color: var(--crema);
+  color: var(--bg-color);
   font-size: 1.9rem;
-  font-weight: 600;
+  font-weight: 500;
   justify-content: center;
   cursor: pointer;
   margin-bottom: 2rem;
@@ -61,7 +61,7 @@
   width: 80rem;
   border: none;
   border-radius: 1rem;
-  background-color: var(--marron);
+  background-color: var(--bg-color);
   padding: 1.5rem;
 }
 

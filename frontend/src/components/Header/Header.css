@@ -6,13 +6,13 @@ header {
 
 header h1 {
     font-family: var(--titlefont);
-    font-weight: 400;
-    color: var(--negro);
-    font-size: 7rem;
+    font-weight:200;
+    color: var(--black);
+    font-size: 6rem;
     font-style: normal;
   }
   
 .logo {
   height: 6rem;
-  /* filter:grayscale(.75); */
+  filter:grayscale(1);
 }

@@ -1,6 +1,6 @@
 .listContainer {
     width: 100%;
-    background-color: var(--crema);
+    background-color: var(--bg-color-dark);
     min-height: 70rem;
     padding: 5rem 6rem;
     border-radius: 1rem;
@@ -25,15 +25,15 @@
   
   .searchInput::placeholder,
   .searchInput {
-    color: var(--crema);
-    font-weight: 600;
+    color: var(--black);
+    font-weight: 400;
     font-size: 2rem;
     font-family: var(--mainfont);
   }
   .searchButton,
   .searchInput {
     height: 5rem;
-    background-color: var(--marron);
+    background-color: var(--bg-color);
     border: none;
   }
   
@@ -61,7 +61,7 @@
   
   ul hr {
     height: 0.3rem;
-    background-color: var(--marron);
+    background-color: var(--bg-color-dark);
     border: none;
   }
   

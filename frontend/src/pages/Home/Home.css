@@ -27,12 +27,12 @@
   }
   
   .bgGreen {
-    background-color: var(--crema);
-    color: var(--negro);
+    background-color: var(--highlight-color3);
+    color: var(--black);
   }
   
   .bgCream {
-    background-color: var(--verde-oscuro);
-    color: var(--crema);
+    background-color: var(--bg-color-dark);
+    color: var(--black);
   }
   
