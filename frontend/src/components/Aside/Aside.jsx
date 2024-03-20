@@ -1,7 +1,6 @@
 import { Dialog } from "primereact/dialog";
 import "./Aside.css";
 import { useState } from "react";
-import  Header  from "../Header/Header";
 import 'primeicons/primeicons.css';
 
 export default function Aside() {

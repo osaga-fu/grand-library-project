@@ -29,11 +29,7 @@ export default function ListMembers() {
           className="searchButton"
           onClick={handleSearch}
         >
-          <img
-            className="searchIcon"
-            src="../../../src/imgs/Search.svg"
-            alt="icono buscador"
-          />
+          <i className="pi pi-search" style={{ fontSize: "2.5rem" }}></i>
         </button>
         <input
           className="searchInput"

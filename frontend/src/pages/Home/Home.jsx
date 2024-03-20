@@ -1,7 +1,6 @@
 import "./Home.css";
 import List from "../../components/List/List";
 import { Link } from "react-router-dom";
-import Aside from "../../components/Aside/Aside";
 
 export default function Home() {
   return (
@@ -9,10 +8,10 @@ export default function Home() {
       <section>
         <div className="sectionButtons">
           <Link to={"/"}>
-            <button className="bgCream">Catálogo</button>
+            <button className="bgNeutral">Catálogo</button>
           </Link>
           <Link to={"/members"}>
-            <button className="bgGreen">Socios</button>
+            <button className="bgHighlight">Socios</button>
           </Link>
         </div>
         <List />

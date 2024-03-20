@@ -26,12 +26,12 @@
     cursor: pointer;
   }
   
-  .bgGreen {
+  .bgHighlight {
     background-color: var(--highlight-color3);
     color: var(--black);
   }
   
-  .bgCream {
+  .bgNeutral {
     background-color: var(--bg-color-dark);
     color: var(--black);
   }

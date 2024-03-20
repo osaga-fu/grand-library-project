@@ -17,6 +17,10 @@
     border-radius: 3rem 0 0 3rem;
     cursor: pointer;
   }
+
+  .pi-search {
+    color: var(--black);
+  }
   
   .searchInput {
     width: 100%;
