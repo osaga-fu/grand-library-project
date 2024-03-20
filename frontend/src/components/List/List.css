@@ -4,6 +4,7 @@
     min-height: 70rem;
     padding: 5rem 6rem;
     border-radius: 3rem;
+    box-shadow: 2px 2px 4px #777777;
   }
   
   .searchContainer {

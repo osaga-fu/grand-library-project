@@ -39,7 +39,16 @@
   margin-bottom: 2rem;
   font-family: var(--mainfont);
   gap: 1.5rem;
+  box-shadow: 2px 2px 4px var(--bg-color-dark);
 }
+
+.buttonAddBook:active,
+.buttonAddMember:active,
+.addForm button:active {
+  translate: 2px 2px;
+}
+
+
 
 .addForm button.acceptButton {
   width: 17rem;
