@@ -10,7 +10,7 @@ export default function Members() {
       <section>
         <div className="sectionButtons">
           <Link to={"/"}>
-            <button className="bgHighlight">Catálogo</button>
+            <button className="bgHighlight">Libros</button>
           </Link>
           <Link to={"/members"}>
             <button className="bgNeutral">Socios</button>

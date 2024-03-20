@@ -8,7 +8,7 @@ export default function Home() {
       <section>
         <div className="sectionButtons">
           <Link to={"/"}>
-            <button className="bgNeutral">Catálogo</button>
+            <button className="bgNeutral">Libros</button>
           </Link>
           <Link to={"/members"}>
             <button className="bgHighlight">Socios</button>
