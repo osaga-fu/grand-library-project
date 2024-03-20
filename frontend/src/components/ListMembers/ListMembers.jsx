@@ -44,7 +44,7 @@ export default function ListMembers() {
         {results.map((result) => (
           <div key={result.memberId}>
             <div className="list">
-              <div className="leftPartList">
+              <div className="leftPartList memberList">
                 <li className="listTitle">{result.firstName}</li>
                 <li className="listTitle">{result.lastName}</li>
               </div>

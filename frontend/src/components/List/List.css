@@ -57,7 +57,7 @@
     display: flex;
     color: var(--black);
     font-size: 1.9rem;
-    gap: 3rem;
+    gap: 2rem;
     font-weight: 300;
   }
   .leftPartList {
@@ -71,3 +71,6 @@
     border: none;
   }
   
+  .leftPartList.memberList{
+    gap: .7rem;
+  }
