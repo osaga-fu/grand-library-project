@@ -48,11 +48,11 @@
   translate: 2px 2px;
 }
 
-
-
 .addForm button.acceptButton {
   width: 17rem;
   height: 5rem;
+  align-self: center;
+  margin-top: 2rem;
 }
 
 .buttonAddBook {
@@ -72,14 +72,15 @@
 }
 .p-dialog {
   border-radius: 3rem;
+  margin: 0 auto;
 }
 
 .addForm {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  margin: 4rem 0 2rem 0;
-  align-items: center;
+  gap: .5rem;
+  margin: 2rem 0 2rem 0;
+  padding: 0 7rem;
 }
 
 .addForm input {
@@ -95,5 +96,11 @@
 .addForm input {
   color: var(--crema);
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+
+.addForm label{
+  font-size: 1.8rem;
+  align-self: 10px;
+  padding-top: 1.5rem;
 }

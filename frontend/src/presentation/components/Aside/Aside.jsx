@@ -113,13 +113,13 @@ export default function Aside() {
         {showFormBooks && (
           <form className="addForm" onSubmit={handleSubmitBooks}>
             <label htmlFor="title">Título</label>
-            <input type="text" name="title" placeholder="Título" />
+            <input type="text" name="title"  />
             <label htmlFor="author">Autor</label>
-            <input type="text" name="author" placeholder="Autor" />
+            <input type="text" name="author" />
             <label htmlFor="isbn">ISBN</label>
-            <input type="text" name="isbn" placeholder="ISBN" />
+            <input type="text" name="isbn"  />
             <label htmlFor="sectionCode">Sección</label>
-            <input type="text" name="sectionCode" placeholder="Sección" />
+            <input type="text" name="sectionCode" />
             <button className="acceptButton" type="submit">
             <i className="pi pi-plus-circle" style={{fontSize: '2.5rem'}}></i>
               ACEPTAR
@@ -134,7 +134,7 @@ export default function Aside() {
       </button>
       <Dialog
         visible={visibleMembers}
-        style={{ width: "50vw" }}
+        style={{ width: "65rem" }}
         onHide={() => {
           setVisibleMembers(false);
           setSuccessMessageMembers("");
@@ -160,10 +160,14 @@ export default function Aside() {
         )}
         {showFormMembers && (
           <form className="addForm" onSubmit={handleSubmitMembers}>
-            <input type="text" name="firstName" placeholder="Nombre" />
-            <input type="text" name="lastName" placeholder="Apellidos" />
-            <input type="text" name="dni" placeholder="DNI" />
-            <input type="text" name="email" placeholder="Email" />
+            <label htmlFor="firsName">Nombre</label>
+            <input type="text" name="firstName" />
+            <label htmlFor="lastName">Apellidos</label>
+            <input type="text" name="lastName" />
+            <label htmlFor="dni">DNI</label>
+            <input type="text" name="dni" />
+            <label htmlFor="email">Email</label>
+            <input type="text" name="email" />
             <button className="acceptButton" type="submit">
             <i className="pi pi-plus-circle" style={{fontSize: '3rem'}}></i>
               ACEPTAR
