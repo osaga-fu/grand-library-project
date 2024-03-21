@@ -2,6 +2,7 @@ header {
   display: flex;
   align-items: center;
   gap: 2rem;
+  padding: 0 10rem;
 }
 
 header h1 {

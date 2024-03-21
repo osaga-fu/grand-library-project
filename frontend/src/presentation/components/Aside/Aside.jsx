@@ -112,9 +112,13 @@ export default function Aside() {
         )}
         {showFormBooks && (
           <form className="addForm" onSubmit={handleSubmitBooks}>
-            <input type="text" name="title" placeholder="Libro" />
+            <label htmlFor="title">Título</label>
+            <input type="text" name="title" placeholder="Título" />
+            <label htmlFor="author">Autor</label>
             <input type="text" name="author" placeholder="Autor" />
+            <label htmlFor="isbn">ISBN</label>
             <input type="text" name="isbn" placeholder="ISBN" />
+            <label htmlFor="sectionCode">Sección</label>
             <input type="text" name="sectionCode" placeholder="Sección" />
             <button className="acceptButton" type="submit">
             <i className="pi pi-plus-circle" style={{fontSize: '2.5rem'}}></i>
