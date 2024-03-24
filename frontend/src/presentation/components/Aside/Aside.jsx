@@ -2,8 +2,12 @@ import { Dialog } from "primereact/dialog";
 import "./Aside.css";
 import { useState } from "react";
 import 'primeicons/primeicons.css';
+import { useBookContext } from "../../../middleware/context/BookContext";
 
 export default function Aside() {
+
+  const { addBook } = useBookContext();
+
   const [visibleBooks, setVisibleBooks] = useState(false);
   const [visibleMembers, setVisibleMembers] = useState(false);
   const [showFormBooks, setShowFormBooks] = useState(true);
@@ -12,6 +16,7 @@ export default function Aside() {
   const [successMessageMembers, setSuccessMessageMembers] = useState("");
   const [errorMessageBooks, setErrorMessageBooks] = useState("");
   const [errorMessageMembers, setErrorMessageMembers] = useState("");
+  
 
   const handleSubmitBooks = async (event) => {
     event.preventDefault();
@@ -22,24 +27,12 @@ export default function Aside() {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:8080/books`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      if (response.ok) {
-        const responseData = await response.json();
-        setSuccessMessageBooks(
-          `${responseData.title},${responseData.author},${responseData.isbn},${responseData.sectionCode}`
-        );
-        setErrorMessageBooks("");
-        setShowFormBooks(false);
-      } else {
-        setErrorMessageBooks("Error al agregar el libro");
-        setSuccessMessageBooks("");
-      }
+      await addBook(data);
+      setSuccessMessageBooks("¡Libro agregado con éxito!");
+      setErrorMessageBooks("");
+      setShowFormBooks(false);
     } catch (error) {
-      console.error("Error al buscar", error);
+      console.error("Error al agregar el libro", error);
       setErrorMessageBooks("Error al agregar el libro");
       setSuccessMessageBooks("");
     }

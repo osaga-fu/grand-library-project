@@ -17,9 +17,23 @@ export const BookProvider = ({ children }) => {
     }
   };
 
+
+  const addBook = async (data) => {
+    try {
+      const response = await bookService.addBook(data); 
+  
+      console.log("Book added successfully:", response.data); 
+  
+    } catch (error) {
+      console.error("Error adding book:", error);
+      throw new Error("Failed to add book"); 
+    }
+  };
+
   const value = {
     books,
     searchBooks,
+    addBook
   };
 
   return (
