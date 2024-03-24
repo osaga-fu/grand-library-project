@@ -1,27 +1,23 @@
 import "../List/List.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useMemberContext } from "../../../middleware/context/MemberContext";
 
 export default function ListMembers() {
-  const [search, setSearch] = useState("");
-  const [results, setResults] = useState([]);
-  const handleSearch = async () => {
-    try {
-      const response = await fetch(
-        `http://localhost:8080/members?query=${search}`
-      );
+  const { members, searchMembers } = useMemberContext();
 
-      const data = await response.json();
-      setResults(data);
-    } catch (error) {
-      console.error("Error al buscar", error);
-    }
+  const [search, setSearch] = useState("");
+
+  const handleSearch = async () => {
+    searchMembers(search);
   };
+
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       handleSearch();
     }
   };
+
   return (
     <section className="listWrapper">
       <div className="sectionButtons">
@@ -51,16 +47,16 @@ export default function ListMembers() {
           />
         </section>
         <ul>
-          {results.map((result) => (
-            <div key={result.memberId}>
+          {members.map((member) => (
+            <div key={member.memberId}>
               <div className="list">
                 <div className="leftPartList memberList">
-                  <li className="listTitle">{result.firstName}</li>
-                  <li className="listTitle">{result.lastName}</li>
+                  <li className="listTitle">{member.firstName}</li>
+                  <li className="listTitle">{member.lastName}</li>
                 </div>
                 <div className="rightPartList">
-                  <li>{result.dni}</li>
-                  <li>{result.email}</li>
+                  <li>{member.dni}</li>
+                  <li>{member.email}</li>
                 </div>
               </div>
               <hr />

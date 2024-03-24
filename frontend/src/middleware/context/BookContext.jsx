@@ -5,6 +5,7 @@ const BookContext = createContext();
 
 export const BookProvider = ({ children }) => {
   const [books, setBooks] = useState([]);
+  
   const bookService = new BookService();
 
   const searchBooks = async (query) => {
