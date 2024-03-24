@@ -1,27 +1,24 @@
 import "./List.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useBookContext } from "../../../middleware/context/BookContext";
 
 export default function List() {
-  const [search, setSearch] = useState("");
-  const [results, setResults] = useState([]);
-  const handleSearch = async () => {
-    try {
-      const response = await fetch(
-        `http://localhost:8080/books?query=${search}`
-      );
 
-      const data = await response.json();
-      setResults(data);
-    } catch (error) {
-      console.error("Error al buscar", error);
-    }
+  const { books, searchBooks } = useBookContext();
+
+  const [search, setSearch] = useState("");
+
+  const handleSearch = async () => {
+    searchBooks(search);
   };
+
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       handleSearch();
     }
   };
+
   return (
     <section className="listWrapper">
       <div className="sectionButtons">
@@ -51,16 +48,16 @@ export default function List() {
           />
         </section>
         <ul>
-          {results.map((result) => (
-            <div key={result.book_id}>
+          {books.map((book) => (
+            <div key={book.book_id}>
               <div className="list">
                 <div className="leftPartList">
-                  <li className="listTitle">{result.title}</li>
-                  <li>{result.author}</li>
+                  <li className="listTitle">{book.title}</li>
+                  <li>{book.author}</li>
                 </div>
                 <div className="rightPartList">
-                  <li>{result.isbn}</li>
-                  <li>{result.sectionCode}</li>
+                  <li>{book.isbn}</li>
+                  <li>{book.sectionCode}</li>
                 </div>
               </div>
               <hr />
