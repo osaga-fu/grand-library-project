@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 10rem;
+}
+
+header h1 {
+    font-family: var(--titlefont);
+    font-weight:200;
+    color: var(--black);
+    font-size: 6rem;
+    font-style: normal;
+  }
+  
+.logo {
+  height: 6rem;
+  filter:grayscale(1);
+}

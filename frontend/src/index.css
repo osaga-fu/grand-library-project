@@ -1,0 +1,48 @@
+.bowlby-one-regular {
+  font-family: "Bowlby One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--mainfont);
+  
+}
+
+:root {
+  --black: #333333;
+  --bg-color:#C2C2C2 ;
+  --bg-color-dark: #9c9c9c ;
+  --highlight-color1:#77708E;
+  --highlight-color2:#416B7C;
+  --highlight-color3: #8e84af;
+  --error: rgb(209, 78, 78);
+  --success: rgb(65, 107, 89);
+  --mainfont: 'Roboto', 'Times New Roman', sans-serif;
+  --titlefont: "Bowlby One", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  width: 100%;
+  padding: 2rem 4rem;
+  min-height: 100vh;
+}
+
+

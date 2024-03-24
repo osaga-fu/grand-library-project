@@ -1,0 +1,40 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  padding: 0 14rem 0 10rem;
+}
+
+.sectionButtons {
+  display: flex;
+  justify-content: end;
+  margin-right: 6rem;
+  gap: 1rem;
+  position: relative;
+}
+
+.sectionButtons button {
+  padding: 1rem 2.5rem 1rem 2.5rem;
+  font-size: 2rem;
+  font-family: var(--mainfont);
+  border: none;
+  border-radius: 2.5rem 2.5rem 0 0;
+  cursor: pointer;
+}
+
+.bgHighlight {
+  background-color: var(--highlight-color3);
+  color: var(--black);
+}
+
+.bgNeutral {
+  background-color: var(--bg-color-dark);
+  color: var(--black);
+}
