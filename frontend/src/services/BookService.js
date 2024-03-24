@@ -9,18 +9,9 @@ export class BookService {
   }
 
   async addBook(data) {
-    try {
-      const response = await axios.post(
-        `http://localhost:8080/books`,
-        data,
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-      return response.data;
-    } catch (error) {
-      console.error("Error adding book:", error);
-      throw new Error("Failed to add book");
-    }
+    const response = await axios.post(`http://localhost:8080/books`, data, {
+      headers: { "Content-Type": "application/json" },
+    });
+    return response.data;
   }
 }

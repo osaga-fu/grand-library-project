@@ -17,9 +17,22 @@ export const MemberProvider = ({ children }) => {
     }
   };
 
+  const addMember = async (data) => {
+    try {
+      const response = await memberService.addMember(data); 
+  
+      console.log("Member added successfully:", response.data); 
+  
+    } catch (error) {
+      console.error("Error adding member:", error);
+      throw new Error("Failed to add member"); 
+    }
+  };
+
   const value = {
     members,
     searchMembers,
+    addMember
   };
 
   return (
