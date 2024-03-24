@@ -6,17 +6,28 @@ import { useBookContext } from "../../../middleware/context/BookContext";
 import { useMemberContext } from "../../../middleware/context/MemberContext";
 
 export default function Aside() {
-  const { addBook } = useBookContext();
-  const { addMember } =useMemberContext();
+  const {
+    addBook,
+    visibleBooks,
+    setVisibleBooks,
+    successMessageBooks,
+    setSuccessMessageBooks,
+    errorMessageBooks,
+    setErrorMessageBooks,
+  } = useBookContext();
 
-  const [visibleBooks, setVisibleBooks] = useState(false);
-  const [visibleMembers, setVisibleMembers] = useState(false);
+  const {
+    addMember,
+    visibleMembers,
+    setVisibleMembers,
+    successMessageMembers,
+    setSuccessMessageMembers,
+    errorMessageMembers,
+    setErrorMessageMembers,
+  } = useMemberContext();
+
   const [showFormBooks, setShowFormBooks] = useState(true);
   const [showFormMembers, setShowFormMembers] = useState(true);
-  const [successMessageBooks, setSuccessMessageBooks] = useState("");
-  const [successMessageMembers, setSuccessMessageMembers] = useState("");
-  const [errorMessageBooks, setErrorMessageBooks] = useState("");
-  const [errorMessageMembers, setErrorMessageMembers] = useState("");
 
   const handleSubmitBooks = async (event) => {
     event.preventDefault();

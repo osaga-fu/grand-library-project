@@ -5,6 +5,9 @@ const MemberContext = createContext();
 
 export const MemberProvider = ({ children }) => {
   const [members, setMembers] = useState([]);
+  const [visibleMembers, setVisibleMembers] = useState(false);
+  const [successMessageMembers, setSuccessMessageMembers] = useState("");
+  const [errorMessageMembers, setErrorMessageMembers] = useState("");
 
   const memberService = new MemberService();
 
@@ -32,7 +35,13 @@ export const MemberProvider = ({ children }) => {
   const value = {
     members,
     searchMembers,
-    addMember
+    addMember,
+    visibleMembers,
+    setVisibleMembers,
+    successMessageMembers,
+    setSuccessMessageMembers,
+    errorMessageMembers,
+    setErrorMessageMembers
   };
 
   return (

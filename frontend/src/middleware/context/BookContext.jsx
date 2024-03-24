@@ -4,7 +4,11 @@ import { BookService } from "../../services/BookService";
 const BookContext = createContext();
 
 export const BookProvider = ({ children }) => {
+
   const [books, setBooks] = useState([]);
+  const [visibleBooks, setVisibleBooks] = useState(false);
+  const [errorMessageBooks, setErrorMessageBooks] = useState("");
+  const [successMessageBooks, setSuccessMessageBooks] = useState("");
   
   const bookService = new BookService();
 
@@ -33,7 +37,13 @@ export const BookProvider = ({ children }) => {
   const value = {
     books,
     searchBooks,
-    addBook
+    addBook,
+    visibleBooks,
+    setVisibleBooks,
+    successMessageBooks,
+    setSuccessMessageBooks,
+    errorMessageBooks,
+    setErrorMessageBooks
   };
 
   return (
