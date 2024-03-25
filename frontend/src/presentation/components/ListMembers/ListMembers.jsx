@@ -7,6 +7,7 @@ export default function ListMembers() {
   const { members, searchMembers } = useMemberContext();
 
   const [search, setSearch] = useState("");
+  const [searched, setSearched] = useState(false);
 
   const handleSearch = async () => {
     searchMembers(search);
@@ -15,6 +16,7 @@ export default function ListMembers() {
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       handleSearch();
+      setSearched(true);
     }
   };
 
@@ -62,6 +64,9 @@ export default function ListMembers() {
               <hr />
             </div>
           ))}
+          {searched && members.length === 0 && (
+            <li className="notFoundSearch">No se han encontrado socios</li>
+          )}
         </ul>
       </div>
     </section>

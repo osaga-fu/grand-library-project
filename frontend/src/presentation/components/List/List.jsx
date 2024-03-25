@@ -7,9 +7,11 @@ export default function List() {
   const { books, searchBooks } = useBookContext();
 
   const [search, setSearch] = useState("");
+  const [searched, setSearched] = useState(false);
 
   const handleSearch = async () => {
     searchBooks(search);
+    setSearched(true);
   };
 
   const handleKeyPress = (e) => {
@@ -62,6 +64,9 @@ export default function List() {
               <hr />
             </div>
           ))}
+          {searched && books.length === 0 && (
+            <li className="notFoundSearch">No se han encontrado libros</li>
+          )}
         </ul>
       </div>
     </section>

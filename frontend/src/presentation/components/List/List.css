@@ -79,3 +79,8 @@
   .leftPartList.memberList{
     gap: .7rem;
   }
+
+  .notFoundSearch {
+    font-size: 2rem;
+    color: var(--black);
+  }
